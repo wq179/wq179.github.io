@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh">
+<!--head模块-->
+
+<head>
+	<!--字符编码-->
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<!--语言-->
+	<meta http-equiv="Content-Language" contect="zh">
+	<!--移动端适配-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!--窗口设定-->
+	<meta http-equiv="Window-target" content="_top">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!--百度禁止转码-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--浏览器的兼容配置-->
+	<!--Microsoft Internet Explorer-->
+	<!--是否开启cleartype显示效果-->
+	<meta http-equiv="cleartype" content="on">
+	<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+	<!--Pinned Site-->
+	<!-- IE 10 / Windows 8 -->
+	<meta name="msapplication-TileImage" content="pinned-tile-144.png">
+	<meta name="msapplication-TileColor" content="#009900">
+	<!--IE 11 / Windows 9.1-->
+	<meta name="msapplication-config" content="ieconfig.xml">
+	<!--Google Chrome-->
+	<!--禁止自动翻译-->
+	<meta name="google" value="notranslate">
+	<!--360浏览器-->
+	<!--极速模式-->
+	<meta name="renderer" content="webkit">
+	<!--QQ手机浏览器-->
+	<!--锁定屏幕在特定方向-->
+	<meta name="x5-orientation" content="portrait">
+	<!-- 全屏显示 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- 应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!--UC浏览器-->
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- 禁止自动探测手机/邮箱号码 -->
+	<meta name="format-detection" content="telphone=no, email=no">
+	<!-- Add to Home Screen添加到主屏 -->
+	<!-- 是否启用 WebApp 全屏模式 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- 设置状态栏的背景颜色,只有在 “apple-mobile-web-app-capable” content=”yes” 时生效 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- 添加到主屏后的标题 -->
+	<meta name="apple-mobile-web-app-title" content="笙临天下">
+	<!--Google Android-->
+	<meta name="theme-color" content="#CCFFFF">
+	<!-- 添加到主屏 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<!--引入核心css-->
+	<link rel="stylesheet" href="heheda/css/main.css" type="text/css">
+	<!--当动态内容被禁止时引入的css-->
+	<noscript>
+		<link rel="stylesheet" href="heheda/css/noscript.css" type="text/css">
+	</noscript>
+	<!--跨域内容预解析-->
+	<link rel="preconnect" href="https://pv.souhu.com/" crossorigin>
+	<link rel="preconnect" href="https://cartoon.ls4.cn/" crossorigin>
+	<link rel="preconnect" href="https://tva1.sinaimg.cn/" crossorigin>
+	<link rel="preconnect" href="https://q2.qlogo.cn/" crossorigin>
+	<link rel="dns-prefetch" href="https://pv.souhu.com/">
+	<link rel="dns-prefetch" href="https://cartoon.ls4.cn/">
+	<link rel="dns-prefetch" href="https://tva1.sinaimg.cn/">
+	<link rel="dns-prefetch" href="https://q2.qlogo.cn/">
+	<!--SEO优化-->
+	<!--标题-->
+	<title>「笙临天下」的小屋！</title>
+	<!--关键词-->
+	<meta name="keywords" content="笙临天下,个人主页,引导页,导航,博客,音乐,电影,壁纸,解析,源码,教程">
+	<!--描述-->
+	<meta name="description" content="「笙临天下」的小屋">
+	<!--作者 author-->
+	<meta name="author" content="笙临天下,2076014035@qq.com">
+	<!--搜索引擎索引方式-->
+	<meta name="robots" content="all">
+	<!--logo-->
+	<link rel="shortcut icon" href="favcion.ico" />
+	<!--SEO优化 END-->
+	<!---资源预加载配置(css)-->
+	<link rel="preload" as="style" href="heheda/css/font-awesome.min.css">
+	<link rel="preload" as="style" href="heheda/css/font.css">
+	<!---资源预加载配置(js)-->
+	<link rel="preload" as="script" href="heheda/js/jquery.min.js">
+	<link rel="preload" as="script" href="heheda/js/su.js">
+	<!---资源预加载配置(图片)-->
+	<link rel="preload" as="image" href="heheda/image/loader.gif" type="image/gif">
+	<link rel="preload" as="image" href="heheda/image/001.png" type="image/png">
+	<link rel="preload" as="image" href="heheda/image/002.png" type="image/png">
+	<link rel="preload" as="image" href="heheda/image/003.png" type="image/png">
+	<link rel="preload" as="image" href="heheda/image/004.png" type="image/png">
+	<link rel="preload" as="image" href="heheda/image/005.png" type="image/png">
+	<link rel="preload" as="image" href="heheda/image/006.png" type="image/png">
+	<link rel="preload" as="image" href="heheda/image/007.png" type="image/png">
+	<link rel="preload" as="image" href="heheda/image/008.png" type="image/png">
+	<!---资源预加载配置(字体)-->
+	<link rel="preload" as="font" href="heheda/font/woff2/7.woff2" type="font/woff2" crossorigin>
+
+</head>
+<!--body模块 并设置禁用右键属性-->
+
+<body class="is-loading" onselectstart="return false" oncontextmenu=self.event.returnValue=false>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<section id="main">
+			<!--header模块-->
+			<header>
+				<!--头像-->
+				<a href="https://wq179.gitee.io/publish.html" rel="noopener" target="_blank"><span class="avatar"><img src="heheda/image/logo.jpg"
+						alt="2076014035" /></span></a>.
+				<!--内容-->
+				<a href="https://wq179.gitee.io/wq179/wq179/index.html" rel="noopener" target="_blank>">
+					<h1>笙临天下</h1>
+				</a>
+				<p>欢迎来到我的小屋！</p>
+			</header>
+			<!--footer模块-->
+			<footer>
+				<!--上部导航-->
+				<a href="https://www.ghxi.com/" class="fa fa-windows" rel="noopener" target="_blank>">软件下载</a>|
+				<a href="https://i.hacking8.com/" class="fa fa-music" rel="noopener" target="_blank>">安全信息流</a>|
+				<a href="https://bing.ioliu.cn/" class="fa fa-picture-o" rel="noopener" target="_blank>">必应图库</a>
+				<!--换行符占位，用于页面排版-->
+				<br><br>
+				<!--中部导航-->
+				<ul class="icons">
+					<li><a href="https://wq179.gitee.io/blog/index.html" class="fa fa-globe" rel="noopener" target="_blank>">blog</a>博客
+					</li>
+					<li><a href="https://www.pipipao.com/" class="fa fa-film" rel="noopener"
+							target="_blank>">movie</a>电影</li>
+					<li><a href="https://ifish.fun/music/fish" class="fa fa-music" rel="noopener"
+							target="_blank>">music</a>音乐</li>
+					<li><a href="https://wq179.gitee.io/wq179/wq179/index.html" class="fa fa-picture-o" rel="noopener" target="_blank>">picture</a>导航</li>
+					<li><a href="http://sltxjk.ysepan.com/" class="fa fa-briefcase" rel="noopener" target="_blank>">pan</a>网盘</li>
+					<li><a href="https://404l.com/" class="fa fa-cogs" rel="noopener" target="_blank>">api</a>极客</li>
+					<li><a href="https://wq179.gitee.io/tuchuang/index.html" class="fa fa-camera" rel="noopener"
+							target="_blank>">photo</a>图床</li>
+				</ul>
+				<!--联系方式-->
+				<a href="https://wq179.gitee.io" class="fa fa-qq" rel="noopener"   target="_blank>">QQ</a>|
+				<a href="https://wq179.gitee.io/publish.html" class="fa fa-weixin" rel="noopener" target="_blank>">微信</a>|
+				<a href="https://wq179.gitee.io/publish.html">微博</a>|
+				<a href="https://wq179.gitee.io/email/index.html" class="fa fa-envelope" rel="noopener" target="_blank>">邮箱</a>
+			</footer>
+		</section>
+		<!-- Footer -->
+		<footer id="footer">
+			<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+			<ul class="copyright">
+				<!--IP信息模块-->
+				<li>您的IP：
+					<script type="text/javascript">
+						document.write(returnCitySN["cip"])
+					</script>
+				</li>
+				<li>您的节点：
+					<script type="text/javascript">
+						document.write(returnCitySN["cid"])
+					</script>
+				</li>
+				<!--位置信息模块-->
+				<li>您的位置：
+					<script type="text/javascript">
+						document.write(returnCitySN["cname"])
+					</script>
+				</li>
+			</ul>
+			<!--版权信息，请勿修改！-->
+			<h2><a href="https://wq179.gitee.io/wq179/wq179/index.html" rel="noopener" target="_blank">笙临天下</a>&nbsp;&copy;&nbsp;版权所有</h2>
+		</footer>
+	</div>
+	<!--页面载入核心设置-->
+	<script>
+		if ('addEventListener' in window) {
+			window.addEventListener('load', function () {
+				document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+			});
+			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+		}
+	</script>
+	<!--落叶效果-->
+	<script src="heheda/js/jquery.min.js"></script>
+	<script src="heheda/js/su.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$('body').wpSuperSnow({
+				flakes: ['heheda/image/007.png', 'heheda/image/006.png', 'heheda/image/004.png',
+					'heheda/image/005.png', 'heheda/image/001.png', 'heheda/image/003.png',
+					'heheda/image/002.png', 'heheda/image/008.png'
+				],
+				totalFlakes: '100',
+				zIndex: '999999999',
+				maxSize: '30',
+				maxDuration: '20',
+				useFlakeTrans: true
+			});
+		});
+	</script>
+	<!-- 音乐播放器 -->
+<div id="music" key="63381a3bc7f73" api="https://music.xfyun.club"></div><script id="xplayer" src="https://music.xfyun.club/Static/player6/js/player.js" ></script>
+</body>
+
+</html>
