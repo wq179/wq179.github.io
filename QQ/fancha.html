@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://qb.321le.cn/qb/sj/ -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>反查</title>
+    <meta name="keywords" content="查询接口">
+    <meta name="description" content="反查">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/layer.js"></script><link rel="stylesheet" href="css/layer.css" id="layuicss-layer">
+    <link rel="stylesheet" href="css/layer.css" id="layuicss-layer">
+
+<style type="text/css">#_copy{align-items:center;background:#4494D5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}</style></head>
+
+<body background="" _c_t_common="1" _c_t_j1="1">
+    <div class="container">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block" style="float: none;">
+            <br>
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="background: linear-gradient(to right,#b221ff,#14b7ff,#8ae68a);">
+                    <h3 class="panel-title">手机号反查-笙临天下</h3>
+                </div>
+                <div class="panel-body" style="text-align: center;">
+                    <div class="list-group">
+                        <div class="list-group-item list-group-item-warning" style="font-weight: bold;">
+                            <span>输入手机号即可查询绑定QQ和微博ID</span>
+                        </div>
+                        <div class="list-group-item list-group-item-info" style="font-weight: bold;">
+                            <input class="form-control" id="input" placeholder="请输入手机号">
+                        </div>
+                        <div class="list-group-item">
+                            <a onclick="qbang(&#39;cha&#39;)" class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b7ff);">查找</a>
+                            <br>
+                            <a href="index.html" class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b0ff);">通过QQ号反查</a>
+                            <br>
+                            <a href="index.html" class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b0ff);">首页</a>
+                        </div>
+                        <div class="list-group-item list-group-item-warning" style="font-weight: bold;display: none;" id="jiexi_data">
+                            <div class="input-group">
+                                <span class="input-group-addon ">绑定QQ</span>
+                                <input type="text" class="form-control" placeholder="" id="mobile" readonly="">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">号码归属地</span>
+                                <input type="text" class="form-control" placeholder="" id="mobileduqu" readonly="">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">LOL信息</span>
+                                <input type="text" class="form-control" placeholder="" id="lol" readonly="">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">微博UID</span>
+                                <input type="text" class="form-control" placeholder="" id="wbuid" readonly="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default text-center">
+                <div class="panel-body">
+                    ©&nbsp;2022&nbsp;&nbsp;笙临天下
+                    <br>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function qbang($mod) {
+            var qq = $('#input').val();
+            if (qq == '') {
+                var alert_1 = layer.msg('请输入手机号', {
+                    icon: 5
+                });
+            } else {
+
+                if ($mod == 'cha') {
+                    dialog('<div style="text-align:center"><br><b style="color:#ff4425">仅供查询自己的QQ号码<br>不是自己的请立即退出本页面<br>否则，发生的一切后果本人不负责<br><br>确认查询？？</b><br><br><a onclick=' + 'queren("cha")' + ' class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b7ff);">确认</a><br></div>', 1);
+                }
+            }
+        }
+
+        function queren(mod) {
+            console.log(mod);
+            layer.close(layer.index);
+            var qq = $('#input').val();
+            if (mod == 'cha') {
+                $url = 'https://zy.xywlapi.cc/qqphone?phone=' + qq;
+            }
+
+            var alert_1 = layer.load(0, {
+                shade: false
+            });
+            $.getJSON($url, function(json) {
+                layer.close(alert_1);
+                if (json['status'] == '200') {
+                    layer.msg('查询成功', {
+                        icon: 1
+                    });
+                    $('#mobile').val(json['qq']);
+                    $('#mobileduqu').val(json['phonediqu']);
+                    $('#lol').val(json['lol']);
+                    $('#wbuid').val(json['wb']);
+                    $('#jiexi_data').css("display", "block");
+                } else {
+                    layer.msg(json['message']);
+                    $('#jiexi_data').css("display", "none");
+                }
+            });
+        }
+
+        function dialog(code, exit) {
+            layer.open({
+                type: 1,
+                skin: 'layui-layer-lan', //加上边框
+                area: ['350px', ''], //宽高
+                closeBtn: exit,
+                shade: 0.8,
+                title: '提示',
+                btnAlign: 'c',
+                content: code,
+            });
+        }
+        gg()
+    </script><div class="layui-layer-move"></div>
+
+    <script async="" src="./手机号反查-321乐云_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RT13NSRESZ');
+    </script>
+
+
+</body></html>

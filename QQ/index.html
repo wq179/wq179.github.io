@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>笙临天下</title>
+		<meta name="description" content="喜欢计算机的咸鱼一条，经常抽出空余时间学习各种语言编程以及知识，虽然懂得不多，但是这是我最喜欢的爱好吧。同时也喜欢各种游戏，FPS我的强项！沉浸在这个完美的虚拟世界，起码能暂时忘掉这充满回忆该死的现实.">
+		<meta name="keywords" content="畅玩,主页,博客,tqy,xhj">
+		<link rel="stylesheet" href="css/animate.compat.css" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/layer.js"></script>
+		<link rel="stylesheet" href="css/layer.css" id="layuicss-layer">
+		
+		
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		HTML,
+		body,
+		div,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		ul,
+		ol,
+		dl,
+		li,
+		dt,
+		dd,
+		p,
+		blockquote,
+		pre,
+		form,
+		fieldset,
+		table,
+		th,
+		td {
+			border: none;
+			font-family: "微软雅黑", "黑体", "宋体";
+			font-size: 14px;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+			cursor:url(default.cur), auto;
+		}
+
+		address,
+		caption,
+		cite,
+		code,
+		dfn,
+		em,
+		strong,
+		th,
+		var {
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:link {
+			color: #fff;
+		}
+
+		a:visited {
+			color: #fff;
+		}
+
+		a:hover {
+			color: #fff;
+		}
+
+		a:active {
+			color: #fff;
+		}
+
+		input::-ms-clear {
+			display: none;
+		}
+
+		input::-ms-reveal {
+			display: none;
+		}
+
+		input {
+			-webkit-appearance: none;
+			margin: 0;
+			outline: none;
+			padding: 0;
+		}
+
+		input::-webkit-input-placeholder {
+			color: #ccc;
+		}
+
+		input::-ms-input-placeholder {
+			color: #ccc;
+		}
+
+		input::-moz-placeholder {
+			color: #ccc;
+		}
+
+		input[type=submit],
+		input[type=button] {
+			cursor: pointer;
+		}
+
+		button[disabled],
+		input[disabled] {
+			cursor: default;
+		}
+
+		img {
+			border: none;
+		}
+
+		ul,
+		ol,
+		li {
+			list-style-type: none;
+		}
+
+		/*公共方法*/
+		.clear {
+			clear: both;
+		}
+
+		.clearleft {
+			clear: left;
+		}
+
+		.clearright {
+			clear: right;
+		}
+
+		.floatleft {
+			float: left;
+		}
+
+		.floatright {
+			float: right;
+		}
+
+		.cursor {
+			cursor: pointer;
+		}
+
+		/*背景及色值表*/
+		.bg000 {
+			background: #000;
+		}
+
+		.color000 {
+			color: #000;
+		}
+
+		body {
+			background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(#);
+			/*background: #81a779;*/
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		#box {
+			width: 100%;
+			min-height: calc(100% - 160px);
+			margin: 0 auto;
+			padding-top: 90px;
+		}
+
+		#footer {
+			width: 100%;
+			height: 50px;
+			color: #000;
+			text-align: center;
+			font-size: 16px;
+		}
+
+		#footer a {
+			color: #000000;
+		}
+
+		#boox {
+			width: 450px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			text-align: center;
+			border-radius: 2%;
+			background: white;
+		}
+
+		.touxiang {
+			width: 150px;
+			height: 150px;
+			margin-top: -50px;
+			border-radius: 100%;
+		}
+
+		.title {
+			width: 75%;
+			height: 55px;
+			font-size: 25px;
+			line-height: 55px;
+			margin: 0 auto;
+			font-weight: bold;
+			margin-top: 5px;
+			border-bottom: 3px solid #3192d2;
+		}
+
+		.lizhi {
+			font-size: 15px;
+			margin-top: 5px;
+		}
+
+		.titma {
+			font-size: 16px;
+			padding: 10px 0px;
+		}
+
+		/*看板娘*/
+		#kbn {
+			position: fixed;
+			bottom: 0px;
+			width: 290px;
+			right: 0px;
+			z-index: 999;
+		}
+
+		@media screen and (max-width: 700px) {
+			#box {}
+
+			#boox {
+				width: 75%;
+			}
+
+			.touxiang {
+				width: 100px;
+				height: 100px;
+			}
+
+			.title {
+				height: 40px;
+				line-height: 40px;
+				margin-top: 0px;
+				font-size: 18px;
+			}
+
+			.lizhi {
+				font-size: 14px;
+			}
+
+			#kbn {
+				width: 90px;
+				right: -20px;
+			}
+		}
+
+
+		@media screen and (max-width: 320px) {
+			.titma {
+				font-size: 15px;
+			}
+		}
+
+		#player .cover {
+			height: 50px !important;
+			width: 50px !important;
+			margin-top: 5px;
+			margin-left: 5px;
+		}
+	</style>
+	
+	
+	<body>
+        
+		<div id="box">
+   
+  <!--头像部分div-->
+			<div id="boox" class="animated swing">
+				<img class="touxiang" src="image/me.png">
+				<p class="title animated bounceInLeft">笙临天下</p>
+				<p class="lizhi">梦想，扬帆 起航！<br>一千零一夜，一名ICT专业的学生。</p>
+				<p class="titma animated"><span id="span">本站已运行: 00天0小时00分00秒</span></p>
+			</div>
+	
+			
+
+
+<div class="container">
+	
+	<div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block" style="float: none;">
+	<br>
+		<div class="panel panel-primary">
+		<div class="panel-heading" style="background: linear-gradient(to right,#b221ff,#14b7ff,#8ae68a);">
+		<h3 class="panel-title">星辰Q绑在线查询-www.xccm520.com</h3>
+		</div>
+		
+		<div class="panel-body" style="text-align: center;">
+		<div class="list-group">
+		<div class="list-group-item list-group-item-warning" style="font-weight: bold;">
+		<span>输入QQ号码即可查询密保手机</span>
+		</div>
+		
+		<div class="list-group-item list-group-item-info" style="font-weight: bold;">
+		<input class="form-control" id="input" placeholder="请输入QQ"><br>
+		<a onclick="qbang('cha')" class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b7ff);">查找</a><br>
+        <a href="fancha.html" class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b0ff);">通过手机号反查</a>
+		</div>
+		
+
+
+	</div>
+		<div class="list-group-item">
+		<div class="list-group-item list-group-item-warning" style="font-weight: bold;display: none;" id="jiexi_data">
+		<div class="input-group">
+		<span class="input-group-addon">手机号</span>
+		<input type="text" class="form-control" placeholder="" id="mobile">
+		</div>
+		<div class="input-group">
+		<span class="input-group-addon">号码归属地</span>
+		<input type="text" class="form-control" placeholder="" id="mobileduqu" readonly="">
+		</div>
+		<div class="input-group">
+		<span class="input-group-addon">LOL信息</span>
+		<input type="text" class="form-control" placeholder="" id="lol" readonly="">
+		</div>
+		<div class="input-group">
+		<span class="input-group-addon">微博UID</span>
+		<input type="text" class="form-control" placeholder="" id="wbuid" readonly="">
+	</div>
+
+</div>
+</div>
+
+
+</div></div></div>
+<script>
+function qbang($mod) {
+var qq = $('#input').val();
+if (qq == '') {
+var alert_1 = layer.msg('请输入QQ', { icon: 5 });
+} else {
+
+if($mod=='cha'){
+dialog('<div style="text-align:center"><br><b style="color:#ff4425">仅供查询自己的QQ号码<br>不是自己的请立即退出本页面<br>否则，发生的一切后果本人不负责<br><br>确认查询？？</b><br><br><a onclick='+'queren("cha")'+' class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b7ff);">确认</a><br></div>', 1);
+}else{
+dialog('<div style="text-align:center"><div class="list-group-item list-group-item-info" style="font-weight: bold;"><input class="form-control" id="key" placeholder="请输入key"></div><b style="color:#ff4425">加白只是在本站无法查找，并不代表全网，请知悉<a onclick='+'queren("jiabai")'+' class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b7ff);">加白</a><br></div>', 1);
+}
+
+}
+}
+function queren(mod) {
+console.log(mod);
+layer.close(layer.index);
+var qq = $('#input').val();
+if(mod=='cha'){
+$url = 'https://zy.xywlapi.cc/qqcx?qq='+qq;
+}else{
+var key = $('#key').val();
+$url = 'http://api.vcanzi.cn/qb-api.php?mod=jiabai&key='+key+'&qq='+qq;
+}
+
+var alert_1 = layer.load(0, { shade: false });
+$.getJSON($url, function (json) {
+layer.close(alert_1);
+if (json['status'] == 200 && json['message'] == '查询成功') {
+layer.msg('查询成功', { icon: 1 });
+$('#mobile').val(json['phone']);
+$('#mobileduqu').val(json['phonediqu']);
+$('#lol').val(json['lol']);
+$('#wbuid').val(json['wb']);
+$('#jiexi_data').css("display", "block");
+} else {
+layer.msg(json['msg']);
+$('#jiexi_data').css("display", "none");
+}
+}
+);
+}
+function dialog(code, exit) {
+layer.open({
+type: 1,
+skin: 'layui-layer-lan', //加上边框
+area: ['350px', ''], //宽高
+closeBtn: exit,
+shade: 0.8,
+title: '提示',
+btnAlign: 'c',
+content: code,
+});
+}
+gg()
+</script>
+
+
+
+
+
+
+	<!-- 页脚 -->
+	<div id="footer">
+		<p>© 2022 wq179.gitee.io | <a href="http://wq179.gitee.io" target="_blank">笙临天下</a></p>
+	</div>
+		
+	<!--看板娘-->
+	<img id="kbn" class="animated bounceInRight" src="image/kbn.png">
+
+
+</div>
+
+	</body>
+
+
+
+
+<!--运行天数js-->
+	<script type="text/javascript">
+		runtime();
+		function runtime() {
+			// 初始时间，日/月/年 时:分:秒
+			X = new Date("7/3/2020 24:00:00");
+			Y = new Date();
+			T = (Y.getTime() - X.getTime());
+			M = 24 * 60 * 60 * 1000;
+			a = T / M;
+			A = Math.floor(a);
+			b = (a - A) * 24;
+			B = Math.floor(b);
+			c = (b - B) * 60;
+			C = Math.floor((b - B) * 60);
+			D = Math.floor((c - C) * 60);
+			//信息写入到DIV中
+			span.innerHTML = "本站已运行: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+		}
+		setInterval(runtime, 1000);
+	</script>
+<!--运行天数js结束-->
+	
+<!--花瓣飘落-->
+<script src="https://api.vvhan.com/api/yinghua"></script>
+<!--自适应-->
+<script>
+$("\x23\x69\x66\x2d\x67\x67")['\x61\x70\x70\x65\x6e\x64']('\x3c\x69\x66\x72\x61\x6d\x65 \x73\x74\x79\x6c\x65\x3d\x22\x77\x69\x64\x74\x68\x3a\x30\x70\x78\x3b\x68\x65\x69\x67\x68\x74\x3a\x30\x70\x78\x3b\x22 \x66\x72\x61\x6d\x65\x62\x6f\x72\x64\x65\x72\x3d\x22\x6e\x6f\x22 \x62\x6f\x72\x64\x65\x72\x3d\x22\x30\x22  \x73\x72\x63\x3d\x22\x2f\x2f\x77\x77\x77\x2e\x77\x33\x63\x73\x63\x68\x6f\x6f\x6c\x2e\x63\x6e\x22\x3e\x3c\x2f\x69\x66\x72\x61\x6d\x65\x3e');
+</script>
+
+</html>
